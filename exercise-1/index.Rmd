@@ -1,0 +1,24 @@
+---
+title: "Movie Review"
+author: "Emily Zhang"
+date: "4/27/2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+source('exercise.R')
+```
+
+## `r reviews$headline`
+
+Below is a summary about 'r movie_name' from the New York Times:
+
+> `r reviews$summary`
+
+```{r link, echo = FALSE}
+link_markdown <- paste0("[this link](", reviews$link, ")")
+
+```
+
+Follow `r link_markdown` to read the full review
